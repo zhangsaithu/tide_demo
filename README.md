@@ -7,7 +7,7 @@ Guidance:
 
 2. Edit file paths (e.g., homepath) in the scripts based on your settings.
 
-3. Put the test data in the /data folder if you want to predict your own data. Otherwise, directly run /codes/tide_test.py for our test data.
+3. Put the test data in the data/ folder if you want to predict your own data. Otherwise, directly run codes/tide_test.py for our test data.
 
 4. Enjoy yourself!
 
