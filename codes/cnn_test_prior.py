@@ -113,7 +113,6 @@ model.compile(loss='binary_crossentropy',
               metrics=['accuracy'])
 
 print 'Predicting on test data...'
-
 y_test_pred_n = np.zeros((len(y_test),1))
 y_test_pred_p = np.zeros((len(y_test),1))
 
