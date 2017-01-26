@@ -127,6 +127,6 @@ y_test_pred_p = y_test_pred_p/1
 
 print 'Perf without prior, AUC: '+str(roc_auc_score(y_test, y_test_pred_n))
 print 'Perf without prior, AUPR: '+str(average_precision_score(y_test, y_test_pred_n))
-print 'Perf with prior, AUC: '+str(roc_auc_score(y_test, y_test_pred_ps))
-print 'Perf with prior, AUPR: '+str(average_precision_score(y_test, y_test_pred_ps))
+print 'Perf with prior, AUC: '+str(roc_auc_score(y_test, y_test_pred_p))
+print 'Perf with prior, AUPR: '+str(average_precision_score(y_test, y_test_pred_p))
 
