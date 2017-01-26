@@ -15,8 +15,38 @@ from keras.constraints import maxnorm
 from keras.layers.recurrent import LSTM, GRU
 from sklearn.metrics import average_precision_score, roc_auc_score
 
-from util import seq_matrix
+def seq_matrix(seq_list,label):
+	tensor = np.zeros((len(seq_list),203,8))
+	for i in range(len(seq_list)):
+		seq = seq_list[i]
+		j = 0
+		for s in seq:
+			if s == 'A' and (j<100 or j>102):
+				tensor[i][j] = [1,0,0,0,0,0,0,0]
+			if s == 'T' and (j<100 or j>102):
+				tensor[i][j] = [0,1,0,0,0,0,0,0]
+			if s == 'C' and (j<100 or j>102):
+				tensor[i][j] = [0,0,1,0,0,0,0,0]
+			if s == 'G' and (j<100 or j>102):
+				tensor[i][j] = [0,0,0,1,0,0,0,0]
+			if s == '$':
+				tensor[i][j] = [0,0,0,0,0,0,0,0]
+			if s == 'A' and (j>=100 and j<=102):
+				tensor[i][j] = [0,0,0,0,1,0,0,0]
+			if s == 'T' and (j>=100 and j<=102):
+				tensor[i][j] = [0,0,0,0,0,1,0,0]
+			if s == 'C' and (j>=100 and j<=102):
+				tensor[i][j] = [0,0,0,0,0,0,1,0]
+			if s == 'G' and (j>=100 and j<=102):
+				tensor[i][j] = [0,0,0,0,0,0,0,1]
+			j += 1
+	if label == 1:
+		y = np.ones((len(seq_list),1))
+	else:
+		y = np.zeros((len(seq_list),1))
+	return tensor, y
 
+###### main function ######
 codon_tis_prior = np.load('dict_piror_front_Gaotrain.npy')
 codon_tis_prior = codon_tis_prior.item()
 
