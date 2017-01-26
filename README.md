@@ -1,5 +1,5 @@
 # Translation Initiation site DEtector (TIDE)
-This is a demo to predict translation initiation sites using TIDE.
+This is a demo of predicting translation initiation sites using TIDE.
 
 Guidance:
 
