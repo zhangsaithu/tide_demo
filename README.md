@@ -9,7 +9,7 @@ Guidance:
 
 3. Put the test data in the data/ folder if you want to predict your own data. Otherwise, directly run codes/tide_test.py for our test data as a demo.
 
-4. Note that the codes and data here are only for demo, and a user-friendly version of TIDE software is coming soon.
+4. Note that the codes and data released here are only for the demo use, and a user-friendly version of our TIDE software is coming soon.
 
 If you have any questions, please feel free to contact me :)
 
