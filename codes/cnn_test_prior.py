@@ -17,8 +17,6 @@ from sklearn.metrics import average_precision_score, roc_auc_score
 
 from util import seq_matrix
 
-
-
 codon_tis_prior = np.load('dict_piror_front_Gaotrain.npy')
 codon_tis_prior = codon_tis_prior.item()
 
