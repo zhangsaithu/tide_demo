@@ -4,6 +4,7 @@ import h5py
 import scipy.io
 #np.random.seed(1337) # for reproducibility
 
+import theano
 from keras.preprocessing import sequence
 from keras.optimizers import RMSprop
 from keras.models import Sequential
@@ -13,9 +14,10 @@ from keras.regularizers import l2, activity_l1
 from keras.constraints import maxnorm
 from keras.layers.recurrent import LSTM, GRU
 from sklearn.metrics import average_precision_score, roc_auc_score
+
 from util import seq_matrix
 
-import theano
+
 
 codon_tis_prior = np.load('dict_piror_front_Gaotrain.npy')
 codon_tis_prior = codon_tis_prior.item()
